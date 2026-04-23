@@ -281,7 +281,7 @@ const SkillGapAnalyzer: React.FC = () => {
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-wider text-white/30">Salary Range</p>
                     <p className="text-sm font-bold text-white">
-                      ${(gapResult.salary_range.min / 1000).toFixed(0)}k – ${(gapResult.salary_range.max / 1000).toFixed(0)}k
+                      ₹{(gapResult.salary_range.min / 100000).toFixed(1).replace('.0', '')}L – ₹{(gapResult.salary_range.max / 100000).toFixed(1).replace('.0', '')}L
                     </p>
                   </div>
                 </div>

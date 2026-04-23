@@ -8,8 +8,8 @@ from pydantic import BaseModel, Field
 # ── Shared sub-models ──────────────────────────────────────────────────────────
 
 class SalaryRange(BaseModel):
-    min: int = Field(0, description="Minimum annual salary in USD")
-    max: int = Field(0, description="Maximum annual salary in USD")
+    min: int = Field(0, description="Minimum annual salary in INR")
+    max: int = Field(0, description="Maximum annual salary in INR")
 
 
 class LearningResource(BaseModel):

@@ -64,7 +64,7 @@ function exportRoadmapAsText(recs: CareerRecommendation[]): void {
     lines.push('-'.repeat(50));
     lines.push(`Match Score : ${Math.round(rec.match_score * 100)}%`);
     if (rec.salary_range?.min || rec.salary_range?.max) {
-      lines.push(`Salary Range: $${(rec.salary_range.min / 1000).toFixed(0)}k – $${(rec.salary_range.max / 1000).toFixed(0)}k`);
+      lines.push(`Salary Range: ₹${(rec.salary_range.min / 100000).toFixed(1).replace('.0', '')}L – ₹${(rec.salary_range.max / 100000).toFixed(1).replace('.0', '')}L`);
     }
     if (rec.demand) lines.push(`Demand      : ${rec.demand.replace('_', ' ')}`);
     if (rec.why)   lines.push(`Why this fits: ${rec.why}`);
@@ -250,7 +250,7 @@ const CareerRoadmap: React.FC = () => {
                     <div className="flex items-center gap-2 text-xs text-white/40">
                       <DollarSign className="w-3.5 h-3.5 text-green-400" />
                       Salary: <span className="text-white/70 font-semibold">
-                        ${(rec.salary_range.min / 1000).toFixed(0)}k – ${(rec.salary_range.max / 1000).toFixed(0)}k
+                        ₹{(rec.salary_range.min / 100000).toFixed(1).replace('.0', '')}L – ₹{(rec.salary_range.max / 100000).toFixed(1).replace('.0', '')}L
                       </span>
                     </div>
                   )}

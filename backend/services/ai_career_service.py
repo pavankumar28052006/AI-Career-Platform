@@ -81,7 +81,7 @@ async def get_role_required_skills(role: str) -> dict:
         core_skills: list[str]      — must-have subset
         nice_to_have: list[str]     — bonus skills
         seniority_hint: str         — "junior" | "mid" | "senior"
-        avg_salary_usd: dict        — {"min": int, "max": int}
+        avg_salary_inr: dict        — {"min": int, "max": int}
         demand: str                 — "low" | "medium" | "high" | "very_high"
     """
     cache_key = _role_cache_key(role)
@@ -102,7 +102,7 @@ async def get_role_required_skills(role: str) -> dict:
         '  "core_skills": [list of 4-6 must-have skills from required_skills],\n'
         '  "nice_to_have": [list of 3-5 bonus skills NOT in required_skills],\n'
         '  "seniority_hint": "junior" | "mid" | "senior",\n'
-        '  "avg_salary_usd": {"min": integer, "max": integer},\n'
+        '  "avg_salary_inr": {"min": integer, "max": integer} (in INR),\n'
         '  "demand": "low" | "medium" | "high" | "very_high",\n'
         '  "summary": "one sentence describing the role"\n'
         "\nSkill strings must be concise and industry-standard (e.g. 'Python', 'React', 'Kubernetes')."
@@ -125,7 +125,7 @@ async def get_role_required_skills(role: str) -> dict:
             "core_skills": [],
             "nice_to_have": [],
             "seniority_hint": "mid",
-            "avg_salary_usd": {"min": 0, "max": 0},
+            "avg_salary_inr": {"min": 0, "max": 0},
             "demand": "medium",
             "summary": f"Role profile for {role} could not be generated.",
         }
