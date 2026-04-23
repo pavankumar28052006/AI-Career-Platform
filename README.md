@@ -1,4 +1,4 @@
-# 🚀 PropelPro AI | Enterprise Career Intelligence Platform
+# 🚀 AI Career Intelligence Platform
 
 ![CI](https://github.com/pavan/ai-career-platform/actions/workflows/ci.yml/badge.svg)
 ![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)
@@ -6,7 +6,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
 ![Neo4j](https://img.shields.io/badge/Neo4j-018bff?style=flat&logo=neo4j)
 
-**PropelPro AI** is a next-generation, full-stack career intelligence platform designed to transform unstructured career data (resumes) into actionable, deterministic skill ontologies. By synergizing advanced Natural Language Processing (NLP), Large Language Models (LLMs), and Graph Database architecture, the platform dynamically analyzes technical skill gaps and engineers highly personalized, data-driven career roadmaps.
+**AI Career Intelligence Platform** is a next-generation, full-stack career intelligence platform designed to transform unstructured career data (resumes) into actionable, deterministic skill ontologies. By synergizing advanced Natural Language Processing (NLP), Large Language Models (LLMs), and Graph Database architecture, the platform dynamically analyzes technical skill gaps and engineers highly personalized, data-driven career roadmaps.
 
 ## 🌟 High-Level Architecture
 

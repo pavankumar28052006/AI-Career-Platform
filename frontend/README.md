@@ -1,6 +1,6 @@
-# 🎨 PropelPro AI | Frontend Presentation Layer
+# 🎨 AI Career Intelligence Platform | Frontend Presentation Layer
 
-This module houses the client-side architecture for the **PropelPro AI** Career Intelligence Platform. Engineered for maximum performance, responsiveness, and fluid user experience, this frontend acts as the core interface where users upload resumes, visualize their skill graphs, and interact dynamically with AI-generated career roadmaps.
+This module houses the client-side architecture for the **AI Career Intelligence Platform**. Engineered for maximum performance, responsiveness, and fluid user experience, this frontend acts as the core interface where users upload resumes, visualize their skill graphs, and interact dynamically with AI-generated career roadmaps.
 
 ## ⚡ Technology Stack
 
