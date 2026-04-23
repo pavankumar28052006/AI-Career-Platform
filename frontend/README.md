@@ -1,34 +1,56 @@
-# Frontend
+# 🎨 PropelPro AI | Frontend Presentation Layer
 
-This package contains the React frontend for the AI Career Intelligence Platform. It provides the user interface for resume upload, skill-graph exploration, skill-gap analysis, and career roadmap recommendations.
+This module houses the client-side architecture for the **PropelPro AI** Career Intelligence Platform. Engineered for maximum performance, responsiveness, and fluid user experience, this frontend acts as the core interface where users upload resumes, visualize their skill graphs, and interact dynamically with AI-generated career roadmaps.
 
-## Requirements
+## ⚡ Technology Stack
 
-- Node.js 20 or later
-- npm 10 or later
+Constructed using industry-best practices for modern web applications:
+- **Core Framework:** React 19 & TypeScript
+- **Build Engine:** Vite (For lightning-fast HMR and optimized production bundles)
+- **Styling Architecture:** Modern Vanilla CSS augmented with standard structural utility patterns.
+- **Animations:** Framer Motion capabilities for premium, hardware-accelerated micro-animations.
+- **State Management:** Highly decoupled Context API / Zustand stores ensuring minimal re-renders.
 
-## Local Setup
+## 🛠️ Engineering Setup
 
-```bash
-npm install
-cp .env.example .env
-npm run dev
-```
+Ensure your local development environment meets the enterprise requirements:
+- **Node.js:** v20.x or higher
+- **Package Manager:** npm v10.x or higher
 
-The development server runs at http://localhost:5173 by default.
+### Initialization Sequence
 
-## Environment Variables
+1. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-| Variable | Purpose | Default |
-| :--- | :--- | :--- |
-| `VITE_API_BASE_URL` | Backend API base URL | `http://localhost:8000` |
+2. **Environment Configuration:**
+   Establish local environment variables to connect to the microservice API.
+   ```bash
+   cp .env.example .env
+   ```
+   > **Note:** By default, `VITE_API_BASE_URL` is configured to target `http://localhost:8000`. Adjust this if your FastAPI downstream is hosted remotely.
 
-## Available Scripts
+3. **Ignite Development Server:**
+   ```bash
+   npm run dev
+   ```
+   *The application will boot up and be accessible locally at [http://localhost:5173](http://localhost:5173).*
 
-| Script | Description |
+## 📜 Available Command Scripts
+
+The following commands are wired into the underlying build system for rapid development, testing, and deployment:
+
+| Command | Execution Purpose |
 | :--- | :--- |
-| `npm run dev` | Start the Vite development server |
-| `npm run build` | Type-check and build production assets |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint across the frontend codebase |
-| `npm run test` | Run Vitest once |
+| `npm run dev` | Instantiates the Vite development server with Hot Module Replacement. |
+| `npm run build` | Compiles a highly optimized, minified production build into the `dist/` folder. |
+| `npm run preview` | Emulates a production environment locally to preview the built assets. |
+| `npm run lint` | Executes strict ESLint rules across the TypeScript codebase to ensure compliance. |
+| `npm run test` | Triggers the Vitest test runner to ensure UI component integrity and logic validation. |
+
+## 📐 Architecture & Component Design
+
+The frontend is structured to maximize modularity and code reusability. 
+- **Components (`/src/components`):** Reusable UI elements decoupled from heavy business logic.
+- **Data Hooks & Services (`/src/api` & `/src/store`):** Segregated state and side-effect layers tailored to effortlessly sync with the asynchronous AI response endpoints without freezing the main UI thread.
