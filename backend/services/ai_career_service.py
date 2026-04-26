@@ -32,13 +32,13 @@ def _role_cache_key(role: str) -> str:
 
 def _recommend_cache_key(skills: list[str]) -> str:
     key_str = ",".join(sorted(s.lower() for s in skills))
-    return "ai:recommend:" + hashlib.sha256(key_str.encode()).hexdigest()
+    return "ai:recommend:v2:" + hashlib.sha256(key_str.encode()).hexdigest()
 
 
 def _gap_cache_key(skills: list[str], role: str) -> str:
     skills_str = ",".join(sorted(s.lower() for s in skills))
     key_str = f"{role.lower()}::{skills_str}"
-    return "ai:gap:" + hashlib.sha256(key_str.encode()).hexdigest()
+    return "ai:gap:v2:" + hashlib.sha256(key_str.encode()).hexdigest()
 
 
 # ── OpenAI helpers ────────────────────────────────────────────────────────────
@@ -177,6 +177,8 @@ async def ai_analyze_gap(resume_skills: list[str], target_role: str) -> dict:
         '  "role_summary": "brief description of the role",\n'
         '  "salary_range": {"min": integer, "max": integer},\n'
         '  "demand": "low" | "medium" | "high" | "very_high"\n'
+        "\nSalary values must be annual INR (Indian Rupees), not USD."
+        "\nUse realistic India market compensation bands for the role and experience level."
         "\nBe realistic and precise. gap_score should reflect actual overlap, not just count."
     )
 
@@ -249,6 +251,8 @@ async def ai_recommend_careers(skills: list[str]) -> list[dict]:
         '  "next_steps": ["Learn X", "Build a project with Y", ...] (3-4 actionable steps),\n'
         '  "salary_range": {"min": integer, "max": integer},\n'
         '  "demand": "low" | "medium" | "high" | "very_high"\n\n'
+        "Salary values must be annual INR (Indian Rupees), not USD.\n"
+        "Use realistic India market compensation bands for each role.\n"
         "Order the list by match_score descending. Be realistic — not everything should be high match."
     )
 

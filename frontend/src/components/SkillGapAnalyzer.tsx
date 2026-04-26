@@ -12,7 +12,7 @@ import { useGraphStore } from '../store/graphStore';
 import { fetchGapAnalysis } from '../api/analysisApi';
 import {
   Target, ChevronDown, TrendingUp, AlertTriangle, CheckCircle2,
-  RefreshCw, UploadCloud, BookOpen, ExternalLink, DollarSign, Zap,
+  RefreshCw, UploadCloud, BookOpen, ExternalLink, IndianRupee, Zap,
   Clock, ChevronRight,
 } from 'lucide-react';
 import { cn } from '../lib/cn';
@@ -276,7 +276,7 @@ const SkillGapAnalyzer: React.FC = () => {
               {gapResult.salary_range && (gapResult.salary_range.min > 0 || gapResult.salary_range.max > 0) && (
                 <div className="glass rounded-xl p-4 flex items-center gap-3">
                   <div className="w-9 h-9 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0">
-                    <DollarSign className="w-4 h-4 text-green-400" />
+                    <IndianRupee className="w-4 h-4 text-green-400" />
                   </div>
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-wider text-white/30">Salary Range</p>

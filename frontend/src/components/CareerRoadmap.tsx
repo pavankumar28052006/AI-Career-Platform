@@ -12,7 +12,7 @@ import type { CareerRecommendation } from '../api/analysisApi';
 import { motion, type Variants } from 'framer-motion';
 import {
   BookOpen, Download, UploadCloud,
-  RefreshCw, Map, DollarSign, TrendingUp, Lightbulb,
+  RefreshCw, Map, IndianRupee, TrendingUp, Lightbulb,
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '../lib/cn';
@@ -248,7 +248,7 @@ const CareerRoadmap: React.FC = () => {
                   {/* Salary range */}
                   {rec?.salary_range && (rec.salary_range.min > 0 || rec.salary_range.max > 0) && (
                     <div className="flex items-center gap-2 text-xs text-white/40">
-                      <DollarSign className="w-3.5 h-3.5 text-green-400" />
+                      <IndianRupee className="w-3.5 h-3.5 text-green-400" />
                       Salary: <span className="text-white/70 font-semibold">
                         ₹{(rec.salary_range.min / 100000).toFixed(1).replace('.0', '')}L – ₹{(rec.salary_range.max / 100000).toFixed(1).replace('.0', '')}L
                       </span>
